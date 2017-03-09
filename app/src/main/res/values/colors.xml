@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#de9816</color>
+    <color name="colorPrimaryDark">#de9816</color>
+    <color name="colorAccent">#de9816</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="color_text_gray_darker">#333336</color>
+    <color name="black">#000000</color>
+    <color name="black_alpha_light">#98e2e0df</color>
+    <color name="black_alpha_12">#1F000000</color>
+    <color name="black_alpha_30">#4D000000</color>
+    <color name="black_text">#c41a130b</color>
+    <color name="Orange">#e75946</color>
+    <color name="Yellow">#f4d227</color>
+    <color name="Blue">#4674e7</color>
+    <color name="Blue_light">#5e86e9</color>
+    <color name="Green">#0ba62c</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="shadow_gray">#cabbbbbb</color>
+
+    <color name="main_indicator_bg">#f4eded</color>
+    <color name="gray_bg">#fff5f5f5</color>
+    <color name="main_indicator_bg_press">#d2bfbf</color>
+    <color name="text_tip">#ff2e2e2e</color>
+    <color name="seperate_line">#ffcdcdcd</color>
+
+    <color name="subscribe_item_drag_stroke">#ffd2d2d2</color>
+    <color name="subscribe_item_drag_bg">#fff5f5f5</color>
+    <color name="subscribe_item_selected_stroke">#ffde9816</color>
+    <color name="subscribe_item_disabled_stroke">#ffd9d9d9</color>
+    <color name="subscribe_item_selected_bg">#ffffffff</color>
+    <color name="subscribe_item_disabled_bg">#ffefefef</color>
+    <color name="subscribe_item_pressed_stroke">#ffcdcdcd</color>
+    <color name="subscribe_item_pressed_bg">#fff9f9f9</color>
+    <color name="subscribe_item_normal_stroke">#ffcdcdcd</color>
+    <color name="subscribe_item_normal_bg">#fff5f5f5</color>
+    <color name="subscribe_item_text_color_pressed">#ffb9b9b9</color>
+    <color name="subscribe_item_text_color_normal">#ff454545</color>
+    <color name="subscribe_item_text_color_pressed_night">#ff303030</color>
+    <color name="subscribe_item_selected_stroke_night">#eaaf42</color>
+    <color name="subscribe_item_text_color_normal_night">#ff747474</color>
+
+    <color name="test">#ffffffff</color>
+
+</resources>

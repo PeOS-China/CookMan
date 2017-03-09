@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="5dp">
+
+    <com.example.administrator.cookman.ui.component.fab_transformation.widget.RevealFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.example.administrator.cookman.ui.component.fab_transformation.widget.RevealLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/edit_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <EditText
+                        android:id="@+id/edit_search"
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="16dp"
+                        android:imeOptions="actionSearch"
+                        android:hint="@string/search"
+                        android:inputType="text"
+                        android:textColor="#333333"
+                        android:textColorHint="#cccccc"
+                        android:textSize="16sp">
+                        <requestFocus />
+                    </EditText>
+
+                    <ImageView
+                        android:id="@+id/img_search"
+                        android:padding="8dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_search_orange"
+                        android:clickable="true"/>
+
+                </LinearLayout>
+
+            </com.example.administrator.cookman.ui.component.fab_transformation.widget.RevealLinearLayout>
+
+            <LinearLayout
+                android:id="@+id/items"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:text="@string/history_search_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:textSize="14sp"/>
+
+                <com.example.administrator.cookman.ui.component.tagCloudLayout.TagCloudLayout
+                    android:id="@+id/tag_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tagSpacing="15dp"
+                    app:lineSpacing="10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.example.administrator.cookman.ui.component.fab_transformation.widget.RevealFrameLayout>
+
+</LinearLayout>

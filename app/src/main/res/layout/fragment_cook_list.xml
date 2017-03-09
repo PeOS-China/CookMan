@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.administrator.cookman.ui.component.twinklingrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+
+    </com.example.administrator.cookman.ui.component.twinklingrefreshlayout.TwinklingRefreshLayout>
+
+    <View
+        android:id="@+id/view_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_alpha_30"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/icon_app"
+        app:backgroundTint="@color/colorPrimary"
+        app:borderWidth="0dp" />
+
+    <com.example.administrator.cookman.ui.component.fab_transformation.widget.RevealFrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:visibility="visible">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/view_sheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:visibility="invisible"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/relative_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_feedback"
+                    android:clickable="true"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_icon_category"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/icon_category"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/txt_title_category"
+                        android:text="@string/category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@id/img_icon_category"
+                        android:lineSpacingExtra="2dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/relative_collection"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_feedback"
+                    android:clickable="true"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_icon_collection"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/icon_collection"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/txt_title_collection"
+                        android:text="@string/collection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@id/img_icon_collection"
+                        android:lineSpacingExtra="2dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/row_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp">
+
+                    <ImageView
+                        android:id="@+id/img_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="center"
+                        android:src="@mipmap/icon_cancel"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:text="@string/cancel"
+                        android:id="@+id/txt_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@id/img_icon"
+                        android:lineSpacingExtra="2dp"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </com.example.administrator.cookman.ui.component.fab_transformation.widget.RevealFrameLayout>
+
+</RelativeLayout>

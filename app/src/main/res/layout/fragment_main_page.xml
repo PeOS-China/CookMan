@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="5dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@null"
+            android:background="?attr/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/app_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fragment_main_text_size"/>
+
+                <ImageView
+                    android:id="@+id/imgv_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/icon_search"
+                    android:clickable="true"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgv_add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/icon_add"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_btn_bg_add"
+            android:clickable="true"/>
+
+        <com.example.administrator.cookman.ui.component.magicindicator.MagicIndicator
+            android:id="@+id/magic_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/main_indicator_bg"
+            android:layout_toLeftOf="@+id/imgv_add"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_title"
+                android:text="@string/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+
+            <com.example.administrator.cookman.ui.component.SwitchIconView
+                android:id="@+id/switchIconView_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/text_title"
+                android:layout_centerVertical="true"
+                app:si_disabled_alpha="0.95"
+                app:si_disabled_color="@color/shadow_gray"
+                app:si_enabled="true"
+                app:si_tint_color="@color/colorPrimary"
+                app:srcCompat="@mipmap/icon_collection"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/text_sumary"
+            android:text="sumary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp"/>
+
+</LinearLayout>

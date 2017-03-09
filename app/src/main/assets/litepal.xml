@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="cookman" ></dbname>
+    <version value="2" ></version>
+
+    <list>
+        <mapping class="com.example.administrator.cookman.model.entity.tb_cook.TB_CustomCategory"/>
+        <mapping class="com.example.administrator.cookman.model.entity.tb_cook.TB_CookSearchHistory"/>
+        <mapping class="com.example.administrator.cookman.model.entity.tb_cook.TB_CookDetail"/>
+    </list>
+
+</litepal>

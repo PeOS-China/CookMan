@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_cook_channel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.cookman.ui.activity.CookChannelActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="5dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@null"
+            android:background="?attr/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_back"
+                    android:background="@color/colorPrimary"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"/>
+
+                <TextView
+                    android:text="@string/cook_channel_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@+id/imgv_back"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fragment_main_text_size"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/subscribe_main_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_bg"
+            android:orientation="vertical"
+            android:paddingBottom="14.0dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="14.0dip"
+                android:gravity="bottom"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/text_channel_my"
+                    android:text="@string/cook_channel_my"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_tip"/>
+
+                <TextView
+                    android:id="@+id/my_category_tip_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12.0dip"
+                    android:text="@string/cook_channel_tip"
+                    android:textColor="@color/text_tip"
+                    android:textSize="11.0sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/seperate_line"
+                style="@style/subscribe_seperate_line" />
+
+            <com.example.administrator.cookman.ui.component.tagComponent.DragGrid
+                android:id="@+id/userGridView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dip"
+                android:layout_marginRight="14dip"
+                android:gravity="center"
+                android:horizontalSpacing="14dip"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:scrollbars="vertical"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="14.0px" />
+
+            <View
+                android:id="@+id/seperate_line2"
+                style="@style/subscribe_seperate_line" />
+
+            <TextView
+                android:id="@+id/more_category_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:textSize="13sp"
+                android:text="@string/cook_channel_more" />
+
+            <com.example.administrator.cookman.ui.component.tagComponent.OtherGridView
+                android:id="@+id/otherGridView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dip"
+                android:layout_marginRight="14dip"
+                android:gravity="center"
+                android:horizontalSpacing="14dip"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:scrollbars="vertical"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="14.0px" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_cook"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:singleLine="true"
+            android:text="主席红烧肉"
+            android:textColor="#745D5C"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

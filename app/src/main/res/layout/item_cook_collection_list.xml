@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_view_bg_click_white_gray"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/imgv_src"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@mipmap/icon_img_default"/>
+
+    <TextView
+        android:id="@+id/text_name"
+        android:text="name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/imgv_src"
+        android:textColor="#745D5C"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/text_tag"
+        android:text="tag,tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/imgv_src"
+        android:layout_below="@+id/text_name"
+        android:textColor="@color/black_alpha_30"
+        android:textSize="16sp"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/selector_view_bg_click_white_gray"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_more"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/imgv_src"
+        android:background="@color/black_alpha_12">
+    </View>
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text_ingredients"
+        android:text="@string/ingredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp">
+
+        <View
+            android:id="@+id/view_circle1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/shape_circle_orange">
+        </View>
+
+        <TextView
+            android:id="@+id/text_ingredients_content1"
+            android:text="ingredients content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/view_circle1"
+            android:textSize="18sp"
+            android:textColor="@color/black_alpha_30"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp">
+
+        <View
+            android:id="@+id/view_circle2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/shape_circle_orange">
+        </View>
+
+        <TextView
+            android:id="@+id/text_ingredients_content2"
+            android:text="ingredients content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/view_circle2"
+            android:textSize="18sp"
+            android:textColor="@color/black_alpha_30"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_view3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp">
+
+        <View
+            android:id="@+id/view_circle3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/shape_circle_orange">
+        </View>
+
+        <TextView
+            android:id="@+id/text_ingredients_content3"
+            android:text="ingredients content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/view_circle3"
+            android:textSize="18sp"
+            android:textColor="@color/black_alpha_30"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:text="@string/methods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"/>
+
+</LinearLayout>

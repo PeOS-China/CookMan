@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style
+        name="AppTheme.NoActionBar"
+        parent="AppTheme"
+        >
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="SplashTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <style name="AppThemeFullImage"
+        parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SwipeBackLayout">
+        <item name="edge_size">50dip</item>
+        <item name="shadow_left">@mipmap/shadow_left</item>
+        <item name="shadow_right">@mipmap/shadow_right</item>
+        <item name="shadow_bottom">@mipmap/shadow_bottom</item>
+    </style>
+
+    <style name="textToolbarTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#d3d3d3</item>
+    </style>
+
+    <style name="subscribe_seperate_line">
+        <item name="android:background">@color/seperate_line</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5dip</item>
+        <item name="android:layout_marginTop">14.0dip</item>
+        <item name="android:layout_marginBottom">14.0dip</item>
+    </style>
+
+    <!-- 对话框从底部弹出动画 -->
+    <style name="BottomDialogAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/bottom_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/bottom_dialog_out</item>
+    </style>
+
+</resources>

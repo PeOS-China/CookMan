@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_tagview_cook_search_history"
+    android:id="@+id/tag_btn"
+    android:minHeight="24dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:minWidth="45dp"
+    android:gravity="center"
+    android:text="tag"
+    android:textSize="12sp">
+</Button>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SwipeBackLayout">
+        <attr name="edge_size" format="dimension"/>
+        <attr name="edge_flag">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="bottom" value="2" />
+            <enum name="all" value="3" />
+        </attr>
+        <attr name="shadow_left" format="reference"/>
+        <attr name="shadow_right" format="reference"/>
+        <attr name="shadow_bottom" format="reference"/>
+    </declare-styleable>
+
+    <attr name="SwipeBackLayoutStyle" format="reference"/>
+
+    <declare-styleable name="TwinklingRefreshLayout">
+        <attr name="tr_wave_height" format="dimension"/>
+        <attr name="tr_head_height" format="dimension"/>
+        <attr name="tr_bottom_height" format="dimension"/>
+        <attr name="tr_overscroll_height" format="dimension"/>
+        <attr name="tr_enable_loadmore" format="boolean"/>
+        <attr name="tr_pureScrollMode_on" format="boolean"/>
+        <attr name="tr_overscroll_top_show" format="boolean"/>
+        <attr name="tr_overscroll_bottom_show" format="boolean"/>
+        <attr name="tr_enable_overscroll" format="boolean"/>
+        <attr name="tr_headerView" format="dimension"/>
+        <attr name="tr_bottomView" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="TagCloudLayout">
+        <attr name="lineSpacing" format="dimension" />
+        <attr name="tagSpacing" format="dimension" />
+        <!-- 是否是固定布局 -->
+        <attr name="isFixed" format="boolean" />
+        <attr name="columnSize" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchIconView">
+        <attr name="si_tint_color" format="color"/>
+        <attr name="si_animation_duration" format="integer"/>
+        <attr name="si_disabled_alpha" format="float"/>
+        <attr name="si_disabled_color" format="color"/>
+        <attr name="si_enabled" format="boolean"/>
+        <attr name="si_no_dash" format="boolean"/>
+    </declare-styleable>
+
+</resources>
