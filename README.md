@@ -2,7 +2,7 @@
 一款菜谱查询工具Android APP
 
 #screenshot
-![主页](/screenshot/1.png =225x400) 
+<img src="/screenshot/1.png" width = "225" height = "400" alt="主页"/>
 ![搜索界面](/screenshot/2.png =225x400) 
 ![搜索结果](/screenshot/3.png =225x400) 
 ![频道定制](/screenshot/4.png =225x400) 
