@@ -47,3 +47,10 @@ appChannel=XiaoMi
 appPackage=com.example.administrator.cookman
 appVersion=1.0.0
 
+file=F:\CodeProject\Android\CookMan\app\build\outputs\mapping\Fir\release\mapping.txt
+sha1=c6000e7cf62b21804b5bfec4b4154cd5e0cb0804
+appId=2d8e531cd1
+appChannel=Fir
+appPackage=com.example.administrator.cookman
+appVersion=1.1.0
+
