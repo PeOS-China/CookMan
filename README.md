@@ -3,20 +3,22 @@
 
 #screenshot
 <img src="/screenshot/1.png" width = "225" height = "400" alt="主页"/>
-![搜索界面](/screenshot/2.png =225x400) 
-![搜索结果](/screenshot/3.png =225x400) 
-![频道定制](/screenshot/4.png =225x400) 
-![二级菜单](/screenshot/5.png =225x400) 
-![分类界面](/screenshot/6.png =225x400) 
-![收藏界面](/screenshot/7.png =225x400) 
-![收藏删除](/screenshot/8.png =225x400) 
-![菜谱详情](/screenshot/9.png =225x400) 
+<img src="/screenshot/2.png" width = "225" height = "400" alt="搜索界面"/>
+<img src="/screenshot/3.png" width = "225" height = "400" alt="搜索结果"/>
+<br />
+<img src="/screenshot/4.png" width = "225" height = "400" alt="频道定制"/>
+<img src="/screenshot/5.png" width = "225" height = "400" alt="二级菜单"/>
+<img src="/screenshot/6.png" width = "225" height = "400" alt="分类界面"/>
+<br />
+<img src="/screenshot/7.png" width = "225" height = "400" alt="收藏界面"/>
+<img src="/screenshot/8.png" width = "225" height = "400" alt="收藏删除"/>
+<img src="/screenshot/9.png" width = "225" height = "400" alt="菜谱详情"/>
 
 #项目用到的开源库
-RxJava
-retrofit2
-litepal
-glide
-butterknife
+RxJava<br />
+retrofit2<br />
+litepal<br />
+glide<br />
+butterknife<br />
 
 搜索历史仍有bug，待修复
