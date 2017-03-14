@@ -33,7 +33,7 @@
         <!-- 配置APP版本号 -->
         <meta-data
             android:name="BUGLY_APP_VERSION"
-            android:value="1.1.0" />
+            android:value="1.2.0" />
         <!-- 配置APP渠道号 -->
         <meta-data
             android:name="BUGLY_APP_CHANNEL"

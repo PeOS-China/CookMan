@@ -1,8 +1,8 @@
 # CookMan
-一款菜谱查询工具Android APP
-
+一款菜谱查询工具Android APP<br />
+![CookMan](/screenshot/cookMan.gif) 
 #作者博客
-[简书](http://www.jianshu.com/p/2d976e54f3a0)
+[简书](http://www.jianshu.com/p/2d976e54f3a0)<br />
 [CSDN 已停更](http://blog.csdn.net/cxp2205455256?viewmode=contents)
 
 #APK下载地址

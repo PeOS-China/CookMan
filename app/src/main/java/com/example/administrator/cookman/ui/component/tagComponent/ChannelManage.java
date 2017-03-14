@@ -19,7 +19,6 @@ public class ChannelManage {
 
 
 	private ChannelManage() throws SQLException {
-		return;
 	}
 
 

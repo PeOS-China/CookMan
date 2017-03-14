@@ -8,6 +8,9 @@ public class ErrorExceptionUtil {
 
     public static String getErrorMsg(Throwable e){
 
+        if(null == e || null == e.getMessage())
+            return "网络出问题了";
+
         String msg;
         String err = e.getMessage();
 

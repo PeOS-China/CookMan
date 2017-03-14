@@ -33,6 +33,9 @@ public class MainPageViewPageAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
+        if(null == customCategoryDatas)
+            return 0;
+
         return customCategoryDatas.size();
     }
 
