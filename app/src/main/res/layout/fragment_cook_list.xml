@@ -5,18 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.administrator.cookman.ui.component.twinklingrefreshlayout.TwinklingRefreshLayout
-        android:id="@+id/refresh_layout"
+    <com.example.administrator.cookman.ui.component.twinklingrefreshlayout.PeRefreshLayout.PeRefreshLayout
+        android:id="@+id/refreshLayout_data"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+    </com.example.administrator.cookman.ui.component.twinklingrefreshlayout.PeRefreshLayout.PeRefreshLayout>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerview_list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:overScrollMode="never"/>
+    <!--<com.example.administrator.cookman.ui.component.twinklingrefreshlayout.TwinklingRefreshLayout-->
+        <!--android:id="@+id/refresh_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
 
-    </com.example.administrator.cookman.ui.component.twinklingrefreshlayout.TwinklingRefreshLayout>
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/recyclerview_list"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:overScrollMode="never"/>-->
+
+    <!--</com.example.administrator.cookman.ui.component.twinklingrefreshlayout.TwinklingRefreshLayout>-->
 
     <View
         android:id="@+id/view_overlay"

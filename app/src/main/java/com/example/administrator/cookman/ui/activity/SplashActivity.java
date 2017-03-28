@@ -1,6 +1,8 @@
 package com.example.administrator.cookman.ui.activity;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
 
 import com.example.administrator.cookman.IView.ISplashView;
@@ -23,6 +25,8 @@ public class SplashActivity extends Activity implements ISplashView {
         startMainActivity();
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    @SuppressWarnings("deprecation")
     private void startMainActivity(){
         MainActivity.startActivity(this);
         overridePendingTransition(0, 0);

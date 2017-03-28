@@ -21,6 +21,8 @@ import com.example.administrator.cookman.ui.adapter.CookListAdapter;
 import com.example.administrator.cookman.ui.component.fab_transformation.FabTransformation;
 import com.example.administrator.cookman.ui.component.twinklingrefreshlayout.Footer.BottomProgressView;
 import com.example.administrator.cookman.ui.component.twinklingrefreshlayout.IBottomView;
+import com.example.administrator.cookman.ui.component.twinklingrefreshlayout.PeRefreshLayout.PeRefreshLayout;
+import com.example.administrator.cookman.ui.component.twinklingrefreshlayout.PeRefreshLayout.PeRefreshLayoutListener;
 import com.example.administrator.cookman.ui.component.twinklingrefreshlayout.RefreshListenerAdapter;
 import com.example.administrator.cookman.ui.component.twinklingrefreshlayout.TwinklingRefreshLayout;
 import com.example.administrator.cookman.ui.component.twinklingrefreshlayout.header.bezierlayout.BezierLayout;
@@ -38,12 +40,17 @@ import butterknife.OnClick;
  * Created by Administrator on 2017/2/17.
  */
 
-public class CookListFragment extends BaseFragment implements ICookListView {
+public class CookListFragment extends BaseFragment implements
+        ICookListView
+    , PeRefreshLayoutListener
+{
 
-    @Bind(R.id.refresh_layout)
-    public TwinklingRefreshLayout twinklingRefreshLayout;
-    @Bind(R.id.recyclerview_list)
-    public RecyclerView recyclerList;
+//    @Bind(R.id.refresh_layout)
+//    public TwinklingRefreshLayout twinklingRefreshLayout;
+//    @Bind(R.id.recyclerview_list)
+//    public RecyclerView recyclerList;
+    @Bind(R.id.refreshLayout_data)
+    public PeRefreshLayout peRefreshLayout;
 
     @Bind(R.id.view_overlay)
     public View viewOverlay;
@@ -52,6 +59,8 @@ public class CookListFragment extends BaseFragment implements ICookListView {
     @Bind(R.id.view_sheet)
     public View viewSheet;
 
+    public TwinklingRefreshLayout twinklingRefreshLayout;
+    public RecyclerView recyclerList;
     private CookListAdapter cookListAdapter;
 
     private TB_CustomCategory customCategoryData;
@@ -69,6 +78,10 @@ public class CookListFragment extends BaseFragment implements ICookListView {
 
     @Override
     protected void initView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        peRefreshLayout.setPeRefreshLayoutListener(this);
+        twinklingRefreshLayout = peRefreshLayout.getTwinklingRefreshLayout();
+        recyclerList = peRefreshLayout.getRecyclerView();
+
         recyclerList.setLayoutManager(new LinearLayoutManager(recyclerList.getContext()));
         cookListAdapter = new CookListAdapter(getActivity());
         recyclerList.setAdapter(cookListAdapter);
@@ -135,14 +148,24 @@ public class CookListFragment extends BaseFragment implements ICookListView {
     /********************************************************************************************/
     @Override
     public void onCookListUpdateRefreshSuccess(ArrayList<CookDetail> list){
-        twinklingRefreshLayout.finishRefreshing();
 
+        if(peRefreshLayout.isShowDataView()){
+            peRefreshLayout.setModeList();
+        }
+
+        twinklingRefreshLayout.finishRefreshing();
         cookListAdapter.setDataList(conversion(list));
         cookListAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void onCookListUpdateRefreshFaile(String msg){
+
+        if(peRefreshLayout.isShowDataView()){
+            peRefreshLayout.setModeException(msg);
+            return ;
+        }
+
         twinklingRefreshLayout.finishRefreshing();
         ToastUtil.showToast(getActivity(), msg);
     }
@@ -157,6 +180,12 @@ public class CookListFragment extends BaseFragment implements ICookListView {
     public void onCookListLoadMoreFaile(String msg){
         twinklingRefreshLayout.finishLoadmore();
         ToastUtil.showToast(getActivity(), msg);
+    }
+    /********************************************************************************************/
+
+    @Override
+    public void onPeRefreshLayoutClick(){
+        cookListPresenter.updateRefreshCookMenuByID(customCategoryData.getCtgId());
     }
     /********************************************************************************************/
 
