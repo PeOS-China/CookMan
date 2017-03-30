@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">厨客</string>
+    <string name="app_name_about">关于厨客APP</string>
 
     <string name="toast_msg_oncemore_exit">再按一次返回键退出</string>
     <string name="toast_msg_no_more_data">没有更多数据了</string>
@@ -8,6 +9,7 @@
     <string name="cancel">取消</string>
     <string name="category">分类</string>
     <string name="collection">收藏</string>
+    <string name="about">关于</string>
     <string name="search">搜索</string>
     <string name="delete">删除</string>
 
@@ -19,6 +21,23 @@
 
     <string name="ingredients">用料</string>
     <string name="methods">做法</string>
+
+    <string name="about_project">项目</string>
+    <string name="about_look_core">查看项目源码</string>
+    <string name="about_share_core">分享项目源码</string>
+    <string name="about_look_bo">查看个人博客</string>
+    <string name="about_share_app">分享厨客APP</string>
+    <string name="about_github">感谢开源框架的支持</string>
+    <string name="about_open_source">• RxJava: github.com/ReactiveX/RxJava\n• RxAndroid: github.com/ReactiveX/RxAndroid\n• Retrofit: github.com/square/retrofit\n• Glide: github.com/bumptech/glide\n• Litepal: github.com/LitePalFramework/LitePal\n• Mob API 提供的菜谱数据</string>
+    <string name="about_html_look_core">https://github.com/PeOS-China/CookMan</string>
+    <string name="about_html_look_bo">http://www.jianshu.com/u/0bbc74885ea0</string>
+
+    <string name="share_app_title">分享-厨客APP</string>
+    <string name="share_app_content">欢迎使用“厨客”，烹饪是一种生活态度，您可以在https://fir.im/59cg下载</string>
+    <string name="share_core_title">分享-厨客源码</string>
+    <string name="share_core_content">CookMan，厨客，是一款基于MVP + RxJava + retrofit2的，包括查询、搜索、分类、收藏菜谱功能的APP。您可以在https://github.com/PeOS-China/CookMan下载</string>
+
+    <string name="can_not_find_version_name">找不到版本号</string>
 
     <string name="transition_cook_detail_imgv_bg">transition_cook_detail_imgv_bg</string>
     <string name="transition_cook_detail_content">transition_cook_detail_content</string>

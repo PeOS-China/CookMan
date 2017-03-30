@@ -11,19 +11,6 @@
         android:layout_height="match_parent">
     </com.example.administrator.cookman.ui.component.twinklingrefreshlayout.PeRefreshLayout.PeRefreshLayout>
 
-    <!--<com.example.administrator.cookman.ui.component.twinklingrefreshlayout.TwinklingRefreshLayout-->
-        <!--android:id="@+id/refresh_layout"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent">-->
-
-        <!--<android.support.v7.widget.RecyclerView-->
-            <!--android:id="@+id/recyclerview_list"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:overScrollMode="never"/>-->
-
-    <!--</com.example.administrator.cookman.ui.component.twinklingrefreshlayout.TwinklingRefreshLayout>-->
-
     <View
         android:id="@+id/view_overlay"
         android:layout_width="match_parent"
@@ -128,6 +115,40 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="16dp"
                         android:layout_toRightOf="@id/img_icon_collection"
+                        android:lineSpacingExtra="2dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_feedback"
+                    android:clickable="true"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_icon_about"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/icon_about"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/txt_title_about"
+                        android:text="@string/about"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@id/img_icon_about"
                         android:lineSpacingExtra="2dp"
                         android:textColor="@color/black"
                         android:textSize="16sp"

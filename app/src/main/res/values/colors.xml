@@ -9,6 +9,7 @@
     <color name="color_text_gray_darker">#333336</color>
     <color name="black">#000000</color>
     <color name="black_alpha_light">#98e2e0df</color>
+    <color name="black_light">#e2e0df</color>
     <color name="black_alpha_12">#1F000000</color>
     <color name="black_alpha_30">#4D000000</color>
     <color name="black_text">#c41a130b</color>
@@ -19,11 +20,14 @@
     <color name="Green">#0ba62c</color>
     <color name="divider">#B6B6B6</color>
     <color name="shadow_gray">#cabbbbbb</color>
+    <color name="lineColor">#60d3d3d3</color>
 
     <color name="main_indicator_bg">#f4eded</color>
     <color name="gray_bg">#fff5f5f5</color>
     <color name="main_indicator_bg_press">#d2bfbf</color>
     <color name="text_tip">#ff2e2e2e</color>
+    <color name="text_yellow_light">#dddd80</color>
+    <color name="text_default">#6f6f6f</color>
     <color name="seperate_line">#ffcdcdcd</color>
 
     <color name="subscribe_item_drag_stroke">#ffd2d2d2</color>

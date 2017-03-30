@@ -26,6 +26,7 @@ public final class Constants {
     public final static String Umeng_Event_Id_Search = "Umeng_Event_Id_Search";
     public final static String Umeng_Event_Id_Channel = "Umeng_Event_Id_Channel";
     public final static String Umeng_Event_Id_Category = "Umeng_Event_Id_Category";
+    public final static String Umeng_Event_Id_About = "Umeng_Event_Id_About";
     public final static String Umeng_Event_Id_Collection_Add = "Umeng_Event_Id_Collection_Add";
     public final static String Umeng_Event_Id_Collection_See = "Umeng_Event_Id_Collection_See";
 }

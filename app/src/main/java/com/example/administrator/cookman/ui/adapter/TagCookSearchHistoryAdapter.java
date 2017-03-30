@@ -8,8 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 
 import com.example.administrator.cookman.R;
-import com.example.administrator.cookman.model.entity.tb_cook.TB_CookSearchHistory;
-import com.example.administrator.cookman.utils.Logger.Logger;
+import com.example.administrator.cookman.model.entity.CookEntity.CookSearchHistory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,17 +20,17 @@ import java.util.List;
 public class TagCookSearchHistoryAdapter extends BaseAdapter {
 
     private Context context;
-    private List<TB_CookSearchHistory> datas;
+    private List<CookSearchHistory> datas;
 
-    public TagCookSearchHistoryAdapter(Context context, List<TB_CookSearchHistory> datas) {
+    public TagCookSearchHistoryAdapter(Context context, List<CookSearchHistory> datas) {
         this.context = context;
 
         this.datas = new ArrayList<>();
-        for(TB_CookSearchHistory item : datas)
+        for(CookSearchHistory item : datas)
             this.datas.add(item);
 
         if(datas.size() > 0){
-            this.datas.add(new TB_CookSearchHistory(TB_CookSearchHistory.CookSearchHistory_Type_Clean, "清除历史"));
+            this.datas.add(new CookSearchHistory("清除历史"));
         }
 
     }
@@ -42,7 +41,7 @@ public class TagCookSearchHistoryAdapter extends BaseAdapter {
     }
 
     @Override
-    public TB_CookSearchHistory getItem(int position) {
+    public CookSearchHistory getItem(int position) {
         return datas.get(position);
     }
 
@@ -70,7 +69,7 @@ public class TagCookSearchHistoryAdapter extends BaseAdapter {
         return convertView;
     }
 
-    public void setDatas(List<TB_CookSearchHistory> datas){
+    public void setDatas(List<CookSearchHistory> datas){
         this.datas = datas;
     }
 

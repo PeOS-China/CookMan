@@ -20,7 +20,7 @@ import android.widget.TextView;
 import com.example.administrator.cookman.IView.ICookSearchView;
 import com.example.administrator.cookman.R;
 import com.example.administrator.cookman.model.entity.CookEntity.CookDetail;
-import com.example.administrator.cookman.model.entity.tb_cook.TB_CookSearchHistory;
+import com.example.administrator.cookman.model.entity.CookEntity.CookSearchHistory;
 import com.example.administrator.cookman.model.manager.CookSearchHistoryManager;
 import com.example.administrator.cookman.presenter.CookSearchPresenter;
 import com.example.administrator.cookman.ui.activity.CookSearchResultActivity;
@@ -29,8 +29,6 @@ import com.example.administrator.cookman.ui.component.fab_transformation.animati
 import com.example.administrator.cookman.ui.component.fab_transformation.animation.ViewAnimationUtils;
 import com.example.administrator.cookman.ui.component.tagCloudLayout.TagCloudLayout;
 import com.example.administrator.cookman.utils.KeyboardUtil;
-import com.example.administrator.cookman.utils.Logger.Logger;
-import com.example.administrator.cookman.utils.TimerUtil;
 import com.example.administrator.cookman.utils.ToastUtil;
 
 import java.util.ArrayList;
@@ -65,7 +63,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener
     private int centerX;
     private int centerY;
 
-    private List<TB_CookSearchHistory> datas;
+    private List<CookSearchHistory> datas;
     private CookSearchPresenter cookSearchPresenter;
     private TagCookSearchHistoryAdapter tagCookSearchHistoryAdapter;
 
@@ -115,7 +113,6 @@ public class SearchFragment extends Fragment implements View.OnClickListener
                     }
                 });
                 mRevealAnimator.setDuration(400);
-                //mRevealAnimator.setStartDelay(100);
                 mRevealAnimator.setInterpolator(new AccelerateDecelerateInterpolator());
                 mRevealAnimator.start();
                 return true;
@@ -223,20 +220,9 @@ public class SearchFragment extends Fragment implements View.OnClickListener
     @Override
     public void onCookSearchSuccess(ArrayList<CookDetail> list, int totalPages){
         CookSearchHistoryManager.getInstance().save();
+
         CookSearchResultActivity.startActivity(getActivity(), searchKey, totalPages, list);
         onBackPressed();
-
-//        TimerUtil.startTimer(1000, new TimerUtil.TimerCallBackListener() {
-//            @Override
-//            public void onStart() {
-//                cookSearchPresenter.saveHistory();
-//            }
-//
-//            @Override
-//            public void onEnd() {
-//                onBackPressed();
-//            }
-//        });
 
     }
 
@@ -256,6 +242,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener
 
     private void tagCookSearchHistoryClean(){
 
+        CookSearchHistoryManager.getInstance().clean();
         tagHistory.setVisibility(View.GONE);
 
     }
@@ -269,8 +256,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener
             return ;
 
         KeyboardUtil.showKeyboard(getActivity(), editSearch, false);
-        CookSearchHistoryManager.getInstance().add2Buffer(
-                new TB_CookSearchHistory(TB_CookSearchHistory.CookSearchHistory_Type_Content, searchKey));
+        CookSearchHistoryManager.getInstance().add2Buffer(new CookSearchHistory(searchKey));
         cookSearchPresenter.search(searchKey);
     }
 

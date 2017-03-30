@@ -1,0 +1,203 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="center_horizontal"
+            app:expandedTitleMarginTop="220dp"
+            app:expandedTitleTextAppearance="@style/textToolbarTitle"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgv_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/img_about"
+                    android:scaleType="centerCrop"
+                    android:transitionName="@string/transition_cook_detail_imgv_bg"/>
+
+                <TextView
+                    android:id="@+id/text_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="8dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"/>
+
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="32dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:drawableStart="@mipmap/icon_project"
+                android:gravity="center"
+                android:text="@string/about_project"
+                android:textColor="@color/text_yellow_light"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/lineColor" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:columnCount="2">
+
+                <Button
+                    android:id="@+id/btn_look_core"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/icon_core"
+                    android:gravity="start|center_vertical"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="12dp"
+                    android:text="@string/about_look_core"
+                    android:textColor="@color/text_default" />
+
+                <Button
+                    android:id="@+id/btn_share_core"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/icon_share_core"
+                    android:gravity="start|center_vertical"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="12dp"
+                    android:text="@string/about_share_core"
+                    android:textColor="@color/text_default" />
+
+                <Button
+                    android:id="@+id/btn_look_bo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/icon_boke"
+                    android:gravity="start|center_vertical"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="12dp"
+                    android:text="@string/about_look_bo"
+                    android:textColor="@color/text_default" />
+
+                <Button
+                    android:id="@+id/btn_share_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@mipmap/icon_share_app"
+                    android:gravity="start|center_vertical"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="12dp"
+                    android:text="@string/about_share_app"
+                    android:textColor="@color/text_default" />
+
+            </GridLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/lineColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:drawableStart="@mipmap/icon_github"
+                android:gravity="center"
+                android:text="@string/about_github"
+                android:textColor="@color/text_yellow_light"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/lineColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:autoLink="web"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/about_open_source"
+                android:textColorLink="@color/text_default"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/lineColor" />
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

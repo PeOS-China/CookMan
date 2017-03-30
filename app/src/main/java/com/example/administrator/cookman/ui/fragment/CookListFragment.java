@@ -15,6 +15,7 @@ import com.example.administrator.cookman.model.entity.CookEntity.CookDetail;
 import com.example.administrator.cookman.model.entity.tb_cook.TB_CustomCategory;
 import com.example.administrator.cookman.presenter.CookListPresenter;
 import com.example.administrator.cookman.presenter.Presenter;
+import com.example.administrator.cookman.ui.activity.AboutActivity;
 import com.example.administrator.cookman.ui.activity.CookCategoryActivity;
 import com.example.administrator.cookman.ui.activity.CookCollectionListActivity;
 import com.example.administrator.cookman.ui.adapter.CookListAdapter;
@@ -45,10 +46,6 @@ public class CookListFragment extends BaseFragment implements
     , PeRefreshLayoutListener
 {
 
-//    @Bind(R.id.refresh_layout)
-//    public TwinklingRefreshLayout twinklingRefreshLayout;
-//    @Bind(R.id.recyclerview_list)
-//    public RecyclerView recyclerList;
     @Bind(R.id.refreshLayout_data)
     public PeRefreshLayout peRefreshLayout;
 
@@ -137,11 +134,19 @@ public class CookListFragment extends BaseFragment implements
         onClickOverlay();
     }
 
-    @OnClick(R.id.txt_title_collection)
+    @OnClick(R.id.relative_collection)
     public void onClickCollection(){
         MobclickAgent.onEvent(getActivity(), Constants.Umeng_Event_Id_Collection_See);
 
         CookCollectionListActivity.startActivity(getActivity());
+        onClickOverlay();
+    }
+
+    @OnClick(R.id.relative_about)
+    public void onClickAbout(){
+        MobclickAgent.onEvent(getActivity(), Constants.Umeng_Event_Id_About);
+
+        AboutActivity.startActivity(getActivity());
         onClickOverlay();
     }
 
